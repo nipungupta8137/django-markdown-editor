@@ -24,7 +24,7 @@ def post_form_view(request):
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save()
-            messages.success(request, '%s successfully saved.' % post.title)
+            messages.success(request, '%s successfully saved !!!' % post.title)
             return redirect('test_markdownify')
     else:
         form = PostForm()
